@@ -48,6 +48,26 @@
 
   == How to use ==
   1, install the C libraries of bcm2835, see: http://www.airspayce.com/mikem/bcm2835/
+    cd ~
+    wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.68.tar.gz
+    tar zxvf bcm2835-1.68.tar.gz
+    cd bcm2835-1.68
+    ./configure
+    make
+    sudo make check
+    sudo make install
+
+    Testing building as a shared object for the python library
+    cd ~
+    wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.68.tar.gz
+    tar zxvf bcm2835-1.68.tar.gz
+    cd bcm2835-1.22/src
+    make libbcm2835.a
+    gcc -shared bcm2835.o -o libbcm2835.so
+    sudo cp libbcm2835.so /usr/local/lib/
+    sudo cp bcm2835.h /usr/local/include/
+    pip2 install PyBCM2835
+
   2, change the current directory to where the Makefile and oled.c file located.
   3, compile the file with: 
        make
