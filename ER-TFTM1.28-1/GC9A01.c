@@ -380,7 +380,7 @@ void GC9A01_char(uint8_t x, uint8_t y, char acsii, char size, char mode, uint16_
                 x ++;
                 break;
             }
-        }
+        } 
     }
 }
 
