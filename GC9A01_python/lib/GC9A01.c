@@ -19,6 +19,20 @@ void data(char cmd) {
     bcm2835_spi_transfer(cmd);
 }
 
+void test(){
+	printf("hello im alive\n");
+	printf("initializing\n");
+	
+	if(!bcm2835_init())
+    {
+    
+    }
+	printf("initialized\n");
+	GC9A01_clear();
+	GC9A01_string(40, 170, "MUSIC", 16, 0, WHITE); 
+	GC9A01_display();
+}
+
 void GC9A01_begin()
 {
     bcm2835_gpio_fsel(RST, BCM2835_GPIO_FSEL_OUTP);

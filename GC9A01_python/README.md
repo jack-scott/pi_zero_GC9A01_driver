@@ -7,5 +7,21 @@ https://github.com/realpython/materials/tree/master/python-bindings/overview_art
 
 *** Installing
 
-pip3 install --user cffi
-pip3 install --user invoke
+pip3 install --user cython
+
+** Building
+
+To build the cython library you must first build the static C library. To do this:
+
+cd /GC9A01_python/lib
+make clean
+make
+
+Then you need to build the Python shared object. To do this:
+
+cd /GC9A01_python/
+make clean
+make
+
+Test the freshly wrapped Python library by running test.py
+

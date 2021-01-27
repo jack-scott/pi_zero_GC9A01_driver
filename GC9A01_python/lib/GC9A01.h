@@ -33,6 +33,7 @@ enum Color {
 #define DC  24
 
 void GC9A01_begin();
+void test();
 void GC9A01_display();
 void GC9A01_clear();
 void GC9A01_pixel(int x,int y, char color);
