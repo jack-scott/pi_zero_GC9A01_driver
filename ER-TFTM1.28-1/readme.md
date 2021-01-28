@@ -61,7 +61,7 @@
     cd ~
     wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.68.tar.gz
     tar zxvf bcm2835-1.68.tar.gz
-    cd bcm2835-1.22/src
+    cd bcm2835-1.68/src
     make libbcm2835.a
     gcc -shared bcm2835.o -o libbcm2835.so
     sudo cp libbcm2835.so /usr/local/lib/

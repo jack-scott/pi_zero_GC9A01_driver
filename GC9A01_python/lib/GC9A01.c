@@ -23,10 +23,10 @@ void test(){
 	printf("hello im alive\n");
 	printf("initializing\n");
 	
-	if(!bcm2835_init())
-    {
+	// if(!bcm2835_init())
+    // {
     
-    }
+    // }
 	printf("initialized\n");
 	GC9A01_clear();
 	GC9A01_string(40, 170, "MUSIC", 16, 0, WHITE); 
